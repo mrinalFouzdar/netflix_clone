@@ -1,0 +1,36 @@
+.mian_container{
+  bottom: 0;
+  margin: auto;
+  min-height: 40vh;
+  padding: 5vh 40vh;
+}
+.query{
+  color: wheat;
+  font-size: 2vh;
+  font-weight: 300;
+  padding-left: 3vh;
+}
+.number:hover{
+  text-decoration: underline;
+}
+
+.flex_container{
+  display: flex;
+  text-align: left;
+  justify-content:space-between ;
+
+
+}
+.info{
+  list-style: none;
+}
+.litag{
+  color: wheat;
+  font-size: 2vh;
+  font-weight: 300;
+  padding-bottom: 3vh;
+  cursor: pointer;
+}
+.litag:hover{
+  text-decoration: underline;
+}

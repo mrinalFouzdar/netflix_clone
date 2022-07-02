@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
+import Footer from "./Components/Footer/Footer";
 import Home from "./Components/home/Home";
 import Navbar from "./Components/Navbar/Navbar";
 import Category from "./pages/category/Category";
@@ -16,8 +17,11 @@ function App() {
   // console.log(movieCollection)
   useEffect(() => {
     nevigate("/");
+
     dispatch(fetchAllMovies());
-  }, []);
+    // eslint-disable-next-line
+
+  },[]);
 
   return (
     <>
@@ -29,6 +33,7 @@ function App() {
         <Route path="/new_Popular" element={<Category />} />
         <Route path="/movie/:movieId" element={<MovieDetails />} />
       </Routes>
+      <Footer/>
     </>
   );
 }
