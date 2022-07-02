@@ -12,6 +12,7 @@ const requests = {
   HorrorMovies: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
   Drama: `/movie/top_rated?api_key=${API_KEY}&language=en-US`,
   Upcoming: `/movie/upcoming?api_key=${API_KEY}&language=en-US`,
+  TVShows: `/tv/popular?api_key=${API_KEY}&language=en-US&page=${3}`,
 };
 
 export default requests;

@@ -4,25 +4,28 @@ import SearchIcon from '@mui/icons-material/Search';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 function Navbar() {
   const [isScrolled, setIsScrolled]=useState(false);
-
+  const nevigate = useNavigate()
   window.onscroll=()=>{
     setIsScrolled(window.pageYOffset === 0? false : true);
     return ()=> (window.onscroll = null)
   }
+  const handleNevigate=()=>{
+    nevigate("/")
+  }
 
-  console.log(isScrolled)
+  // console.log(isScrolled)
   return (
     <div className={isScrolled ?'navbar scrolled': "navbar"}>
       <div className="container">
         {/* left side */}
         <div className="left">
-          <img src="https://www.freepnglogos.com/uploads/netflix-logo-0.png" alt="" className='left-img'/>
-          <Link to="/" className='link_style'>Home</Link>
-          <Link to="/tvshow" className='link_style'>TV Shows</Link>
-          <Link to="/movies" className='link_style'>Movies</Link>
+          <img src="https://www.freepnglogos.com/uploads/netflix-logo-0.png" alt="" className='left-img' onClick={handleNevigate}/>
+          <Link to="/" className='link_style' >Home</Link>
+          <Link to="/tvshows" className='link_style' state={{state:"Tv Shows"}}>TV Shows</Link>
+          <Link to="/movies" className='link_style'state={{state:"Movies"}}>Movies</Link>
           <Link to="/new_Popular" className='link_style'>New & Popular</Link>
           <Link to="/myList" className='link_style'>My List</Link>
         </div>

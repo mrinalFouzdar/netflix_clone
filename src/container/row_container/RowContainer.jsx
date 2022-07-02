@@ -1,9 +1,12 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import Row from "../row/Row";
-
+import "./rowContainer.css"
 function RowContainer() {
+  // const location = useLocation()
+  // console.log(location)
   return (
-    <div>
+    <div className="main_row_container">
       <Row
         movie_category="NetflixOriginals"
         NetflixOriginals
@@ -11,6 +14,7 @@ function RowContainer() {
       ></Row>
       <Row movie_category="Trending"  movieType="Trending Now" />
       <Row movie_category="ActionMovies"  movieType="Action Movies"/>
+      <Row movie_category="Upcoming"  movieType="Upcoming"/>
       <Row movie_category="ComedyMovies"  movieType="Comedy Movies"/>
       <Row movie_category="TopRated"  movieType="Top Rated"/>
       <Row movie_category="RomanceMovies" movieType="Romance Movies" />

@@ -1,6 +1,6 @@
 import React from 'react'
 import RowContainer from '../../container/row_container/RowContainer'
-import Featured from '../featured/Featured'
+import Featured from '../../container/featured/Featured'
 
 function Home() {
   return (

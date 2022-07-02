@@ -2,6 +2,7 @@
     position: relative;
     margin-left: 51px;
     color: white;
+    
   }
 
   .row_container {
@@ -10,6 +11,19 @@
     overflow-x: scroll;
     padding-right: 20px;
   }
+  .isColum_container{
+    margin: 20px 51px 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    grid-gap: 8px;
+    justify-content: center;
+
+  
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+ 
   .row_container::-webkit-scrollbar {
     display: none;
   }
@@ -18,7 +32,7 @@
     font-size: 1.4vw;
     color: #e5e5e5;
     font-weight: 700;
-    margin: 1.6em 0 -0.5em 0;
+    margin: 1.5vh 0 1.5vh 0;
     min-width: 6em;
   }
 
@@ -27,6 +41,10 @@
     height: 100%;
   }
   
+  .isColum_link{
+    height: 100%;
+    width: auto;
+  }
 
   .image {
     object-fit: contain;
@@ -38,7 +56,7 @@
   }
   
   .image:hover {
-    transform: scale(1.04);
+    transform: scale(1.2);
   }
   
   .imageLarge {

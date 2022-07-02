@@ -1,0 +1,8 @@
+.category_container{
+    margin-top: 100px;
+
+}
+.category_row{
+    display: flex;
+    flex-wrap: wrap;
+}

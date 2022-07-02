@@ -1,10 +1,14 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { IMAGE_URL } from "../../api/reqest";
+
 import "./row.css"
-function Row({ movie_category, NetflixOriginals ,movieType}) {
+import { selected_movie } from "../../Redux/Actions/selected_movie/selectedMovie";
+import { Link } from "react-router-dom";
+function Row({ movie_category, NetflixOriginals ,movieType, isColum}) {
   // console.log(movie_category)
   // const {}=useSelector(state=>state.movie_category)
+  const dispatch = useDispatch()
   const { movieCollection } = useSelector((state) => state.movieCategory);
   const filterMovieData = movieCollection.filter(
     (data) => data[movie_category]
@@ -27,28 +31,34 @@ function Row({ movie_category, NetflixOriginals ,movieType}) {
 
   if (filterMovie) {
     const movieArray = Object.keys(filterMovie[movie_category]);
-    console.log(movieArray);
+    // console.log(movieArray);
     movieKeys = shuffleArray(movieArray);
+  }
+
+  const handleSinglemovie=(movie)=>{
+    dispatch(selected_movie(movie))
   }
 
   return (
     <div className="row">
       <h1 className="title">{movieType}</h1>
-      <div className="row_container">
+      <div className=  {isColum ?"isColum_container":"row_container"}>
         {movieKeys
           ? movieKeys.map((key) => {
               const movie = filterMovie[movie_category][key];
-              console.log(movie);
+              // console.log(movie);
               return (
-                <span key={movie.id} className="style_link">
+                <div key={movie.id}>
+                <Link key={movie.id} className={isColum ? "isColum_link":"style_link"} to={`/movie/${movie.id}`} onClick={()=>handleSinglemovie(movie)}>
                   <img
                     className={NetflixOriginals ? "imageLarge" : "image"}
                     src={`${IMAGE_URL}${
                       NetflixOriginals ? movie.poster_path : movie.backdrop_path
                     }`}
-                    alt=""
+                    alt="Images"
                   />
-                </span>
+                </Link>
+                </div>
               );
             })
           : null}
