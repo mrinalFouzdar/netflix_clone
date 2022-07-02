@@ -26,7 +26,7 @@ function Navbar() {
           <Link to="/" className='link_style' >Home</Link>
           <Link to="/tvshows" className='link_style' state={{state:"Tv Shows"}}>TV Shows</Link>
           <Link to="/movies" className='link_style'state={{state:"Movies"}}>Movies</Link>
-          <Link to="/new_Popular" className='link_style'>New & Popular</Link>
+          <Link to="/new_Popular" className='link_style' state={{state:"New & Popular"}}>New & Popular</Link>
           <Link to="/myList" className='link_style'>My List</Link>
         </div>
 

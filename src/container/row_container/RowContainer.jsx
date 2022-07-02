@@ -1,10 +1,7 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 import Row from "../row/Row";
 import "./rowContainer.css"
 function RowContainer() {
-  // const location = useLocation()
-  // console.log(location)
   return (
     <div className="main_row_container">
       <Row
