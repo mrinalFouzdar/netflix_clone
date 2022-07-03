@@ -13,7 +13,7 @@ function App() {
   // const {movieCollection} = useSelector((state)=>state.movieCategory)
   const dispatch = useDispatch();
   const nevigate = useNavigate();
-
+// console.log()
   // console.log(movieCollection)
   useEffect(() => {
     nevigate("/");
