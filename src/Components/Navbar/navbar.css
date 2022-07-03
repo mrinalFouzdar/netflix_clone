@@ -25,6 +25,7 @@
 .left {
     display: flex;
     align-items: center;
+    
 }
 
 
@@ -53,6 +54,7 @@
     border-radius: 5px;
     object-fit: cover;
     cursor: pointer;
+    
 }
 .icon{
   margin: 0px 15px; 
@@ -61,6 +63,9 @@
 
 }
 
+/* .link_style:active{
+    background-color: red;
+} */
 /* 
       span {
         margin-right: 20px;

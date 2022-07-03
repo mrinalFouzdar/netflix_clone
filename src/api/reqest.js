@@ -1,6 +1,6 @@
-const API_KEY=process.env.REACT_APP_API_KEY
+const API_KEY = process.env.REACT_APP_API_KEY;
 
-export const IMAGE_URL = 'https://image.tmdb.org/t/p/original/';
+export const IMAGE_URL = "https://image.tmdb.org/t/p/original/";
 
 const requests = {
   Trending: `/discover/tv?api_key=${API_KEY}&with_networks=213`,

@@ -19,9 +19,7 @@ function App() {
     nevigate("/");
 
     dispatch(fetchAllMovies());
-    // eslint-disable-next-line
-
-  },[]);
+  }, []);
 
   return (
     <>
@@ -31,9 +29,10 @@ function App() {
         <Route path="/tvshows" element={<Category />} />
         <Route path="/movies" element={<Category />} />
         <Route path="/new_Popular" element={<Category />} />
+        <Route path="/myList" element={<Category />} />
         <Route path="/movie/:movieId" element={<MovieDetails />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </>
   );
 }

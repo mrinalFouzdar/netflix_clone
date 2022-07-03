@@ -1,21 +1,19 @@
 import requests from "../../../api/reqest";
-import movieApi from "../../../api/baseURL"
+import movieApi from "../../../api/baseURL";
 import { fetchmovieCollection } from "../movies_category_actions/moviesCategroyAction";
 
-export const fetchAllMovies = () =>  (dispatch) =>{
-
-    Object.entries(requests).forEach((key,i) =>{
-       movieApi.get(key[1])
-       .then((res)=>{
+export const fetchAllMovies = () => (dispatch) => {
+  Object.entries(requests).forEach((key) => {
+    movieApi
+      .get(key[1])
+      .then((res) => {
         // console.log(res)
         // console.log(key)
-        // console.log(i)
-        const movieData=res.data.results
-        dispatch(fetchmovieCollection(movieData,key[0]))
-       })
-       .catch(err=>{
-        console.log(err)
-       })
-              
-    })
-}
+        const movieData = res.data.results;
+        dispatch(fetchmovieCollection(movieData, key[0]));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+};
