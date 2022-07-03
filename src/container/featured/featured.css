@@ -64,3 +64,8 @@
     color: white;
   }
 
+  .btn>span{
+    font-size: 1vw;
+    font-weight: 300;
+  }
+

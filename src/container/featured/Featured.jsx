@@ -39,11 +39,11 @@ function Featured() {
         </h1>
         <div className="main_btn_div">
           <button className=" btn play">
-            <PlayArrowIcon />
+            <PlayArrowIcon sx={{fontSize:"1vw"}}/>
             <span>Play</span>
           </button>
           <button className=" btn infobtn">
-            <InfoOutlinedIcon />
+            <InfoOutlinedIcon sx={{fontSize:"1vw"}}/>
             <span>Info</span>
           </button>
         </div>
